@@ -1,0 +1,18 @@
+sudo: required
+
+language: python
+
+go:
+  - 2.7
+
+services:
+  - docker
+
+before_install:
+  - docker build -t hvnsweeting/saltrbi .
+  - docker ps -a
+
+install: true
+
+script:
+  - docker run hvnsweeting/saltrbi /bin/sh -c "salt-call -c /root/salt/states/test state.sls pip.test"
