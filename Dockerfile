@@ -10,5 +10,4 @@ RUN cd /; tar xzf /tmp/master.tar.gz -C /root/salt
 RUN mv /root/salt/states-master /root/salt/states
 RUN /root/salt/states/salt/minion/bootstrap.sh `hostname`
 RUN salt-call -linfo -c /root/salt/states/test grains.items
-RUN salt-call -linfo -c /root/salt/states/test saltutil.sync_all
 RUN salt-call -linfo -c /root/salt/states/test state.sls vim
