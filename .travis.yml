@@ -15,4 +15,5 @@ before_install:
 install: true
 
 script:
+  - docker run hvnsweeting/saltrbi /bin/sh -c "salt-call -linfo -c /root/salt/states/test state.show_sls hostname"
   - docker run hvnsweeting/saltrbi /bin/sh -c "salt-call -linfo -c /root/salt/states/test state.sls hostname"
