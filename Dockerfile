@@ -11,6 +11,7 @@ RUN mv /root/salt/states-master /root/salt/states
 RUN /root/salt/states/salt/minion/bootstrap.sh `hostname`
 RUN salt-call -linfo -c /root/salt/states/test grains.items
 RUN salt-call -linfo -c /root/salt/states/test state.sls vim
+RUN apt-get install -y software-properties-common
 RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
