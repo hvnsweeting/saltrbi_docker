@@ -1,4 +1,4 @@
-# SaltStack with Robotinfra.com
+# SaltStack minion ready for using with Robotinfra.com
 
 [![Build Status](https://travis-ci.org/hvnsweeting/saltrbi_docker.svg?branch=master)](https://travis-ci.org/hvnsweeting/saltrbi_docker)
 
